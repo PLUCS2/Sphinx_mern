@@ -1,0 +1,33 @@
+{
+  "name": "sphinx",
+  "version": "1.0.0",
+  "description": "Twitter Clone - MERN ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLUCS2/Sphinx_mern.git"
+  },
+  "author": "Kafele Kossally, Paloma Secunda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PLUCS2/Sphinx_mern/issues"
+  },
+  "homepage": "https://github.com/PLUCS2/Sphinx_mern#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
