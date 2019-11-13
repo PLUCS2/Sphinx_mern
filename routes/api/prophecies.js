@@ -33,7 +33,6 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    debugger; 
     const { errors, isValid } = validateProphecyInput(req.body);
 
     if (!isValid) {

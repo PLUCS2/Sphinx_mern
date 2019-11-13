@@ -6,17 +6,19 @@ class Profile extends React.Component {
     super(props);
 
     this.state = {
-      prophecies: []
+      prophecies: [], 
+      users: []
     };
   }
 
   componentWillMount() {
     console.log(this.props.currentUser.id);
     this.props.fetchUserProphecies(this.props.currentUser.id);
+    this.props.fetchUsers(); 
   }
 
   componentWillReceiveProps(newState) {
-    this.setState({ prophecies: newState.prophecies });
+    this.setState({ prophecies: newState.prophecies, users: newState.users });
   }
 
   render() {
@@ -27,7 +29,7 @@ class Profile extends React.Component {
         <div>
           <h2>All of This User's Prophecies</h2>
           {this.state.prophecies.map(prophecy => (
-            <ProphecyBox key={prophecy._id} text={prophecy.text} />
+            <ProphecyBox key={prophecy._id} text={prophecy.text} userId={prophecy.user} users={this.state.users}/>
           ))}
         </div>
       );
