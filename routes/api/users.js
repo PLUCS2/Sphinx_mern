@@ -23,6 +23,12 @@ router.get(
   }
 );
 
+router.get("/", (req, res) => {
+  User.find()
+    .then(users => res.json(users))
+    .catch(err => res.status(404).json({ nousersfound: "No seekers found"}));
+});
+
 router.post("/register", (req, res) => {
 
   const { errors, isValid } = validateRegisterInput(req.body);
